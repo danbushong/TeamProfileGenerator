@@ -4,17 +4,17 @@ class Employee {
         this.id= id;
         this.email=email;
     }
-    retrieveName(){
+    getName(){
         return this.name;
 
     }
-    retrieveID(){
+    getId(){
         return this.id;
     }
-    retrieveEmail(){
+    getEmail(){
         return this.email;
     }
-    retrieveJob(){
+    getRole(){
         return "Employee";
 
     }
