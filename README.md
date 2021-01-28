@@ -35,6 +35,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   ## Questions
   Email: bushongdan@gmail.com<br>
-  Git Hub: https://www.github.com/danbushong
+  Git Hub: https://github.com/danbushong/
+  repo: https://github.com/danbushong/TeamProfileGenerator
   Video Url: https://drive.google.com/file/d/12U05-vQMtPHZPB_Vv-qFC8-3pGCywB66/view?usp=sharing (I fixed the "]" that came after the github name)
 
