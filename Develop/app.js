@@ -117,7 +117,7 @@ function startHtml() {
         <div class="container">
             <div class="row">
                 <div class="team-area col-12 d-flex justify-content-center">
-                    ${ team }
+                    My Amazing Team
                 </div>`;
     fs.writeFile("./output/team.html", html, function (err) {
         if (err) {
@@ -133,49 +133,51 @@ function addHtml(member) {
         const role = member.getRole();
         const id = member.getId();
         const email = member.getEmail();
+        
         let data = "";
         if (role === "Engineer") {
-            const gitHub = member.getGithub();
+            const roleInfo = member.getGithub();
             data = `<div class="card employee-card">
             <div class="card-header">
-                <h2 class="card-title">${ name }</h2>
-                <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${ role }</h3>
+                <h2 class="card-title">${name}</h2>
+                <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${role}</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
-                    <li class="list-group-item">ID: ${ id }}</li>
-                    <li class="list-group-item">Email: <a href="mailto:{{ email }}">${ email }}</a></li>
-                    <li class="list-group-item">GitHub: <a href="https://github.com/${ github }" target="_blank" rel="noopener noreferrer">${ github }</a></li>
+                    <li class="list-group-item">ID: ${ id }</li>
+                    <li class="list-group-item">Email: <a href="mailto:${email}">${ email }</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/${roleInfo}" target="_blank" rel="noopener noreferrer">${roleInfo}]</a></li>
+                    
                 </ul>
             </div>
         </div>`;
         } else if (role === "Intern") {
-            const school = member.getSchool();
+            const roleInfo = member.getSchool();
             data = `<div class="card employee-card">
             <div class="card-header">
-                <h2 class="card-title">{{ name }}</h2>
-                <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3>
+                <h2 class="card-title">${ name }</h2>
+                <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${ role }</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
-                    <li class="list-group-item">ID: {{ id }}</li>
-                    <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-                    <li class="list-group-item">School: {{ school }}</li>
+                    <li class="list-group-item">ID: ${ id }</li>
+                    <li class="list-group-item">Email: <a href="mailto:${ email }">${ email }</a></li>
+                    <li class="list-group-item">School: ${ roleInfo }</li>
                 </ul>
             </div>
             </div>`;
         } else {
-            const officePhone = member.getOfficeNumber();
+            const roleInfo = member.getOfficeNumber();
             data = `<div class="card employee-card">
             <div class="card-header">
-                <h2 class="card-title">{{ name }}</h2>
-                <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3>
+                <h2 class="card-title">${ name }</h2>
+                <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${ role }</h3>
             </div>
             <div class="card-body">
                 <ul class="list-group">
-                    <li class="list-group-item">ID: {{ id }}</li>
-                    <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-                    <li class="list-group-item">Office number: {{ officeNumber }}</li>
+                    <li class="list-group-item">ID: ${ id }</li>
+                    <li class="list-group-item">Email: <a href="mailto:${ email }">${ email }</a></li>
+                    <li class="list-group-item">Office number: ${ roleInfo }</li>
                 </ul>
             </div>
         </div>`;
