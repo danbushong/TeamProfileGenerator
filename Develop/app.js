@@ -4,12 +4,12 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
-//what is this for???
-const render = require("./lib/htmlRenderer");
+
 const employees = [];
 
+//what is this for???
+const render = require("./lib/htmlRenderer");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
-//??
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 
@@ -146,7 +146,7 @@ function addHtml(member) {
                 <ul class="list-group">
                     <li class="list-group-item">ID: ${ id }</li>
                     <li class="list-group-item">Email: <a href="mailto:${email}">${ email }</a></li>
-                    <li class="list-group-item">GitHub: <a href="https://github.com/${roleInfo}" target="_blank" rel="noopener noreferrer">${roleInfo}]</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/${roleInfo}" target="_blank" rel="noopener noreferrer">${roleInfo}</a></li>
                     
                 </ul>
             </div>
